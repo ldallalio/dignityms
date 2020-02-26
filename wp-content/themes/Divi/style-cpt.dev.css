@@ -447,7 +447,7 @@ body:not(.et-tb-has-header) #main-content .container {
   margin-bottom: -16px; }
 
 /* Table Styles */
-.entry-content table, body.et-pb-preview #main-content .container table {
+.entry-content table:not(.variations), body.et-pb-preview #main-content .container table {
   border: 1px solid #eee;
   margin: 0 0 15px 0;
   text-align: left;
@@ -9261,7 +9261,7 @@ span.comment_date {
   /* Button Alignment - Phone */
   /* Newsletter Module */
   /* Call To Action - Use background color */
-  /* Column Adjustments */
+  /* Newsletter Module */
   /* Tabs Module */
   /* Column Adjustments */
   /* Accordion + Toggle Modules*/
@@ -11189,18 +11189,8 @@ span.comment_date {
     padding: 25px; }
     .et-db #et-boc .et-l .et_pb_newsletter .et_pb_module_header:empty {
       display: none; }
-  .et-db #et-boc .et-l .et_pb_newsletter_form,
-  .et-db #et-boc .et-l .et_pb_newsletter_description {
-    width: 50%;
-    padding: 0;
-    position: relative; }
-  .et-db #et-boc .et-l .et_pb_newsletter_description {
-    float: left;
-    margin-bottom: 20px; }
   .et-db #et-boc .et-l .et_pb_newsletter_description p:last-of-type {
     padding-bottom: 0; }
-  .et-db #et-boc .et-l .et_pb_newsletter_form {
-    float: left; }
   .et-db #et-boc .et-l .et_pb_newsletter_description_no_title.et_pb_newsletter_description_no_content .et_pb_newsletter_form {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
@@ -11301,19 +11291,38 @@ span.comment_date {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-size: 16px; }
-  .et-db #et-boc .et-l .et_pb_newsletter {
+  .et-db #et-boc .et-l .et_pb_newsletter.et_pb_subscribe {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .et-db #et-boc .et-l .et_pb_newsletter.et_pb_subscribe .et_pb_newsletter_description {
+      -ms-flex-item-align: start;
+          align-self: start; }
+    .et-db #et-boc .et-l .et_pb_newsletter.et_pb_subscribe .et_pb_newsletter_description,
+    .et-db #et-boc .et-l .et_pb_newsletter.et_pb_subscribe .et_pb_newsletter_form {
+      width: 100%; }
   .et-db #et-boc .et-l .et_pb_newsletter.et_pb_login {
     display: block; }
     .et-db #et-boc .et-l .et_pb_newsletter.et_pb_login .et_pb_module_header:empty + .et_pb_newsletter_description_content > br:first-child {
       display: none; }
-    body.logged-in:not(.et-fb) .et-db #et-boc .et-l .et_pb_newsletter.et_pb_login .et_pb_newsletter_description {
-      margin-bottom: 0; }
+    .et-db #et-boc .et-l .et_pb_newsletter.et_pb_login .et_pb_newsletter_form,
+    .et-db #et-boc .et-l .et_pb_newsletter.et_pb_login .et_pb_newsletter_description {
+      float: left;
+      position: relative; }
+    .et-db #et-boc .et-l .et_pb_newsletter.et_pb_login .et_pb_newsletter_description {
+      margin-bottom: 20px; }
+      body.logged-in:not(.et-fb) .et-db #et-boc .et-l .et_pb_newsletter.et_pb_login .et_pb_newsletter_description {
+        margin-bottom: 0; }
   .et-db #et-boc .et-l .et_pb_newsletter p .et_pb_signup_error {
     border: 1px solid #F00 !important; }
   .et-db #et-boc .et-l .et_pb_newsletter .et_pb_newsletter_fields {
@@ -11336,112 +11345,132 @@ span.comment_date {
     float: none; }
   .et-db #et-boc .et-l .et_pb_newsletter_layout_right_left .et_pb_newsletter_description,
   .et-db #et-boc .et-l .et_pb_newsletter_layout_bottom_top .et_pb_newsletter_description {
-    padding-left: 0;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1; }
-  .et-db #et-boc .et-l .et_pb_newsletter.et_pb_newsletter_layout_right_left .et_pb_newsletter_form {
-    padding-right: 40px;
-    padding-left: 0; }
-  .et-db #et-boc .et-l .et_pb_newsletter.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_description {
+  .et-db #et-boc .et-l .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+  .et-db #et-boc .et-l .et_pb_newsletter.et_pb_login .et_pb_newsletter_form {
     width: 100%;
-    padding-right: 0;
     padding-left: 0;
-    padding-bottom: 25px; }
-  .et-db #et-boc .et-l .et_pb_newsletter.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form {
-    width: 100%;
-    padding-right: 0;
-    padding-left: 0; }
-  .et-db #et-boc .et-l .et_pb_newsletter.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_description {
-    width: 100%;
-    padding-right: 0;
-    padding-left: 0; }
-  .et-db #et-boc .et-l .et_pb_newsletter.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form {
-    width: 100%;
-    padding-right: 0;
-    padding-left: 0;
-    padding-bottom: 25px; }
-  .et-db #et-boc .et-l .et_pb_newsletter_layout_top_bottom,
-  .et-db #et-boc .et-l .et_pb_newsletter_layout_bottom_top,
-  .et-db #et-boc .et-l .et_pb_column_1_2 .et_pb_newsletter_layout_left_right,
-  .et-db #et-boc .et-l .et_pb_column_1_2 .et_pb_newsletter_layout_right_left,
-  .et-db #et-boc .et-l .et_pb_column_3_5 .et_pb_newsletter_layout_left_right,
-  .et-db #et-boc .et-l .et_pb_column_3_5 .et_pb_newsletter_layout_right_left,
-  .et-db #et-boc .et-l .et_pb_column_3_8.et_pb_column_inner .et_pb_newsletter_layout_left_right,
-  .et-db #et-boc .et-l .et_pb_column_3_8.et_pb_column_inner .et_pb_newsletter_layout_right_left,
-  .et-db #et-boc .et-l .et_pb_column_1_3 .et_pb_newsletter_layout_left_right,
-  .et-db #et-boc .et-l .et_pb_column_1_3 .et_pb_newsletter_layout_right_left,
-  .et-db #et-boc .et-l .et_pb_column_1_3.et_pb_column_inner .et_pb_newsletter_layout_left_right,
-  .et-db #et-boc .et-l .et_pb_column_1_3.et_pb_column_inner .et_pb_newsletter_layout_right_left,
-  .et-db #et-boc .et-l .et_pb_column_1_4 .et_pb_newsletter_layout_left_right,
-  .et-db #et-boc .et-l .et_pb_column_1_4 .et_pb_newsletter_layout_right_left,
-  .et-db #et-boc .et-l .et_pb_column_1_4.et_pb_column_inner .et_pb_newsletter_layout_left_right,
-  .et-db #et-boc .et-l .et_pb_column_1_4.et_pb_column_inner .et_pb_newsletter_layout_right_left,
-  .et-db #et-boc .et-l .et_pb_column_1_5 .et_pb_newsletter_layout_left_right,
-  .et-db #et-boc .et-l .et_pb_column_1_5 .et_pb_newsletter_layout_right_left,
-  .et-db #et-boc .et-l .et_pb_column_1_5.et_pb_column_inner .et_pb_newsletter_layout_left_right,
-  .et-db #et-boc .et-l .et_pb_column_1_5.et_pb_column_inner .et_pb_newsletter_layout_right_left,
-  .et-db #et-boc .et-l .et_pb_column_1_6 .et_pb_newsletter_layout_left_right,
-  .et-db #et-boc .et-l .et_pb_column_1_6 .et_pb_newsletter_layout_right_left,
-  .et-db #et-boc .et-l .et_pb_column_1_6.et_pb_column_inner .et_pb_newsletter_layout_left_right,
-  .et-db #et-boc .et-l .et_pb_column_1_6.et_pb_column_inner .et_pb_newsletter_layout_right_left,
-  .et-db #et-boc .et-l .et_pb_column_4_4 .et_pb_newsletter_layout_left_right,
-  .et-db #et-boc .et-l .et_pb_column_4_4 .et_pb_newsletter_layout_right_left,
-  .et-db #et-boc .et-l .et_pb_column_3_4 .et_pb_newsletter_layout_left_right,
-  .et-db #et-boc .et-l .et_pb_column_3_4 .et_pb_newsletter_layout_right_left,
-  .et-db #et-boc .et-l .et_pb_column_2_3 .et_pb_newsletter_layout_left_right,
-  .et-db #et-boc .et-l .et_pb_column_2_3 .et_pb_newsletter_layout_right_left {
+    padding-right: 0; }
+  .et-db #et-boc .et-l .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right, .et-db #et-boc .et-l .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
-  .et-db #et-boc .et-l .et_pb_column_4_4:not(.et_pb_column_inner) > .et_pb_newsletter_layout_left_right,
-  .et-db #et-boc .et-l .et_pb_column_4_4:not(.et_pb_column_inner) > .et_pb_newsletter_layout_right_left,
-  .et-db #et-boc .et-l .et_pb_column_3_4:not(.et_pb_column_inner) > .et_pb_newsletter_layout_left_right,
-  .et-db #et-boc .et-l .et_pb_column_3_4:not(.et_pb_column_inner) > .et_pb_newsletter_layout_right_left,
-  .et-db #et-boc .et-l .et_pb_column_2_3:not(.et_pb_column_inner) > .et_pb_newsletter_layout_left_right,
-  .et-db #et-boc .et-l .et_pb_column_2_3:not(.et_pb_column_inner) > .et_pb_newsletter_layout_right_left {
+    .et-db #et-boc .et-l .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form {
+      padding-left: 0;
+      padding-right: 0; }
+  .et-db #et-boc .et-l .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form {
+    padding-top: 25px; }
+  .et-db #et-boc .et-l .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form {
+    padding-bottom: 25px; }
+  .et-db #et-boc .et-l .et_pb_column_4_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+  .et-db #et-boc .et-l .et_pb_column_4_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form,
+  .et-db #et-boc .et-l .et_pb_column_3_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+  .et-db #et-boc .et-l .et_pb_column_3_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form,
+  .et-db #et-boc .et-l .et_pb_column_2_3 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+  .et-db #et-boc .et-l .et_pb_column_2_3 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form {
+    width: 50%;
+    padding-top: 0;
+    padding-bottom: 0; }
+  .et-db #et-boc .et-l .et_pb_column_4_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form,
+  .et-db #et-boc .et-l .et_pb_column_3_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form,
+  .et-db #et-boc .et-l .et_pb_column_2_3 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form {
+    padding-left: 40px;
+    padding-right: 0; }
+  .et-db #et-boc .et-l .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right, .et-db #et-boc .et-l .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left,
+  .et-db #et-boc .et-l .et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right,
+  .et-db #et-boc .et-l .et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left,
+  .et-db #et-boc .et-l .et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right,
+  .et-db #et-boc .et-l .et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row; }
-  .et-db #et-boc .et-l .et_pb_column_3_8 .et_pb_newsletter_form,
-  .et-db #et-boc .et-l .et_pb_column_3_8 .et_pb_newsletter_description,
-  .et-db #et-boc .et-l .et_pb_column_1_2 .et_pb_newsletter_form,
-  .et-db #et-boc .et-l .et_pb_column_1_2 .et_pb_newsletter_description,
-  .et-db #et-boc .et-l .et_pb_column_3_5 .et_pb_newsletter_form,
-  .et-db #et-boc .et-l .et_pb_column_3_5 .et_pb_newsletter_description,
-  .et-db #et-boc .et-l .et_pb_column_1_3 .et_pb_newsletter_form,
-  .et-db #et-boc .et-l .et_pb_column_1_3 .et_pb_newsletter_description,
-  .et-db #et-boc .et-l .et_pb_column_2_5 .et_pb_newsletter_form,
-  .et-db #et-boc .et-l .et_pb_column_2_5 .et_pb_newsletter_description,
-  .et-db #et-boc .et-l .et_pb_column_1_4 .et_pb_newsletter_form,
-  .et-db #et-boc .et-l .et_pb_column_1_4 .et_pb_newsletter_description,
-  .et-db #et-boc .et-l .et_pb_column_1_5 .et_pb_newsletter_form,
-  .et-db #et-boc .et-l .et_pb_column_1_5 .et_pb_newsletter_description,
-  .et-db #et-boc .et-l .et_pb_column_1_6 .et_pb_newsletter_form,
-  .et-db #et-boc .et-l .et_pb_column_1_6 .et_pb_newsletter_description {
+    .et-db #et-boc .et-l .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form,
+    .et-db #et-boc .et-l .et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form,
+    .et-db #et-boc .et-l .et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form,
+    .et-db #et-boc .et-l .et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form,
+    .et-db #et-boc .et-l .et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form {
+      padding-top: 0;
+      padding-bottom: 0; }
+  .et-db #et-boc .et-l .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form,
+  .et-db #et-boc .et-l .et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form,
+  .et-db #et-boc .et-l .et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form {
+    padding-left: 40px; }
+  .et-db #et-boc .et-l .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form,
+  .et-db #et-boc .et-l .et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form,
+  .et-db #et-boc .et-l .et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form {
+    padding-right: 40px; }
+  .et-db #et-boc .et-l .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form,
+  .et-db #et-boc .et-l .et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form,
+  .et-db #et-boc .et-l .et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form {
+    padding-top: 25px; }
+  .et-db #et-boc .et-l .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form,
+  .et-db #et-boc .et-l .et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form,
+  .et-db #et-boc .et-l .et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form {
+    padding-bottom: 25px; }
+  .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+  .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+  .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form {
     width: 100%;
-    padding: 0; }
-  .et-db #et-boc .et-l .et_pb_column_4_4:not(.et_pb_column_inner) > .et_pb_newsletter,
-  .et-db #et-boc .et-l .et_pb_column_3_4:not(.et_pb_column_inner) > .et_pb_newsletter,
-  .et-db #et-boc .et-l .et_pb_column_2_3:not(.et_pb_column_inner) > .et_pb_newsletter {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-    .et-db #et-boc .et-l .et_pb_column_4_4:not(.et_pb_column_inner) > .et_pb_newsletter .et_pb_newsletter_description,
-    .et-db #et-boc .et-l .et_pb_column_3_4:not(.et_pb_column_inner) > .et_pb_newsletter .et_pb_newsletter_description,
-    .et-db #et-boc .et-l .et_pb_column_2_3:not(.et_pb_column_inner) > .et_pb_newsletter .et_pb_newsletter_description {
-      margin-bottom: 0;
-      -ms-flex-item-align: start;
-          align-self: start; }
-    .et-db #et-boc .et-l .et_pb_column_4_4:not(.et_pb_column_inner) > .et_pb_newsletter .et_pb_newsletter_form,
-    .et-db #et-boc .et-l .et_pb_column_3_4:not(.et_pb_column_inner) > .et_pb_newsletter .et_pb_newsletter_form,
-    .et-db #et-boc .et-l .et_pb_column_2_3:not(.et_pb_column_inner) > .et_pb_newsletter .et_pb_newsletter_form {
-      padding-left: 25px; }
+    padding-left: 0;
+    padding-right: 0; }
+  .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form {
+      padding-left: 0;
+      padding-right: 0; }
+  .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form {
+    padding-top: 25px; }
+  .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form {
+    padding-bottom: 25px; }
+  .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+  .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+  .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form {
+    width: 50%;
+    padding-top: 0;
+    padding-bottom: 0; }
+  .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form {
+    padding-left: 40px;
+    padding-right: 0; }
+  .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+    .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form {
+      padding-top: 0;
+      padding-bottom: 0; }
+  .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form {
+    padding-left: 40px; }
+  .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form {
+    padding-right: 40px; }
+  .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form {
+    padding-top: 25px; }
+  .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form {
+    padding-bottom: 25px; }
+  .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_1_2 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+  .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_1_2 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0; }
+  .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_1_2 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_1_2 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_1_2 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_1_2 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form {
+      padding-left: 0;
+      padding-right: 0; }
+  .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_1_2 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_1_2 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form {
+    padding-top: 25px; }
+  .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_1_2 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_1_2 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form {
+    padding-bottom: 25px; }
   .et-db #et-boc .et-l .et_pb_tabs,
   .et-db #et-boc .et-l .et_pb_wc_tabs {
     border: 1px solid #D9D9D9; }
@@ -11585,11 +11614,11 @@ span.comment_date {
   .et-db #et-boc .et-l .et_pb_column_1_5 .et_pb_map,
   .et-db #et-boc .et-l .et_pb_column_1_6 .et_pb_map {
     height: 230px; }
-  .et-db #et-boc .et-l .grecaptcha-badge {
+  body .grecaptcha-badge {
     visibility: hidden; }
-    body.et_pb_recaptcha_enabled .et-db #et-boc .et-l .grecaptcha-badge {
-      visibility: visible;
-      visibility: initial; }
+  body.et_pb_recaptcha_enabled .grecaptcha-badge {
+    visibility: visible;
+    visibility: initial; }
   .et-db #et-boc .et-l .et_pb_contact_form {
     margin-left: -3%; }
   .et-db #et-boc .et-l .et_pb_contact_form [data-conditional-logic] {
@@ -14375,24 +14404,40 @@ span.comment_date {
       color: #999; }
   .et-db #et-boc .et-l .et_pb_wc_add_to_cart form.cart div.quantity,
   .et-db #et-boc .et-l .et_pb_wc_add_to_cart form.cart .button {
-    float: none;
+    float: none !important;
     display: inline-block;
     vertical-align: middle; }
   .et-db #et-boc .et-l .et_pb_wc_add_to_cart form.cart {
     margin-top: 0 !important;
     margin-bottom: 0 !important; }
+    .et-db #et-boc .et-l .et_pb_wc_add_to_cart form.cart .variations td .label {
+      font-weight: 700; }
+    .et-db #et-boc .et-l .et_pb_wc_add_to_cart form.cart .variations td select {
+      border-style: solid;
+      border-width: 0;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      width: 100%; }
+    .et-db #et-boc .et-l .et_pb_wc_add_to_cart form.cart .variations td.value {
+      position: relative; }
+      .et-db #et-boc .et-l .et_pb_wc_add_to_cart form.cart .variations td.value span:after {
+        border: 6px solid;
+        border-color: #666 transparent transparent transparent;
+        content: '';
+        display: block;
+        height: 0;
+        margin-top: 3px;
+        pointer-events: none;
+        position: absolute;
+        right: 10px;
+        -webkit-transform: translateY(-145%);
+                transform: translateY(-145%);
+        width: 0; }
   .et-db #et-boc .et-l .et_pb_wc_add_to_cart.et_pb_hide_input_quantity .quantity,
   .et-db #et-boc .et-l .et_pb_wc_add_to_cart.et_pb_hide_input_quantity .woocommerce-grouped-product-list-item__quantity {
     display: none !important; }
   .et-db #et-boc .et-l .et_pb_wc_add_to_cart.et_pb_hide_stock .stock {
     display: none; }
-  .et-db #et-boc .et-l .et_pb_wc_add_to_cart .variations .label {
-    font-weight: 700; }
-  .et-db #et-boc .et-l .et_pb_wc_add_to_cart.et_pb_module .et_pb_module_inner form.cart .variations td select {
-    border-style: solid;
-    border-width: 0;
-    -moz-appearance: none;
-    -webkit-appearance: none; }
   .et-db #et-boc .et-l .et_pb_wc_add_to_cart .quantity input.qty {
     border-width: 0 !important;
     border-style: solid !important;
@@ -14406,7 +14451,10 @@ span.comment_date {
     border-width: 0;
     border-style: solid; }
   .et-db #et-boc .et-l .et_pb_wc_cart_notice .woocommerce-message {
-    margin: 0; }
+    margin: 0;
+    border-width: 0 !important;
+    border-style: solid !important;
+    border-color: #333 !important; }
   .et-db #et-boc .et-l .et_pb_wc_rating .star-rating span.rating {
     display: none; }
   .et-db #et-boc .et-l .et_pb_wc_rating .et-pb-icon {
@@ -15095,19 +15143,7 @@ span.comment_date {
       font-size: 3rem;
       line-height: 3rem;
       margin-left: -1.5rem;
-      margin-top: -1.5rem; }
-    .et-db #et-boc .et-l .et_pb_column_4_4:not(.et_pb_column_inner) > .et_pb_newsletter .et_pb_newsletter_form,
-    .et-db #et-boc .et-l .et_pb_column_3_4:not(.et_pb_column_inner) > .et_pb_newsletter .et_pb_newsletter_form,
-    .et-db #et-boc .et-l .et_pb_column_2_3:not(.et_pb_column_inner) > .et_pb_newsletter .et_pb_newsletter_form {
-      padding-left: 0; }
-    .et-db #et-boc .et-l .et_pb_column_4_4:not(.et_pb_column_inner) > .et_pb_newsletter,
-    .et-db #et-boc .et-l .et_pb_column_3_4:not(.et_pb_column_inner) > .et_pb_newsletter,
-    .et-db #et-boc .et-l .et_pb_column_2_3:not(.et_pb_column_inner) > .et_pb_newsletter {
-      display: block; }
-    .et-db #et-boc .et-l .et_pb_column_4_4:not(.et_pb_column_inner) > .et_pb_newsletter .et_pb_newsletter_description,
-    .et-db #et-boc .et-l .et_pb_column_3_4:not(.et_pb_column_inner) > .et_pb_newsletter .et_pb_newsletter_description,
-    .et-db #et-boc .et-l .et_pb_column_2_3:not(.et_pb_column_inner) > .et_pb_newsletter .et_pb_newsletter_description {
-      margin-bottom: 25px; } }
+      margin-top: -1.5rem; } }
   @media all and (min-width: 480px) {
     .et-db #et-boc .et-l {
       /* Comments Module */ }
@@ -15584,10 +15620,21 @@ span.comment_date {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
         -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        overflow: hidden; }
+        flex-wrap: wrap; }
+        .et-db #et-boc .et-l .et_pb_row_4col:not(.et_pb_row--with-menu),
+        .et-db #et-boc .et-l .et_pb_row_5col:not(.et_pb_row--with-menu),
+        .et-db #et-boc .et-l .et_pb_row_6col:not(.et_pb_row--with-menu),
+        .et-db #et-boc .et-l .et_pb_row_1-6_1-6_1-6_1-2:not(.et_pb_row--with-menu),
+        .et-db #et-boc .et-l .et_pb_row_1-6_1-6_1-6:not(.et_pb_row--with-menu),
+        .et-db #et-boc .et-l .et_pb_row_1-2_1-6_1-6_1-6:not(.et_pb_row--with-menu),
+        .et-db #et-boc .et-l .et_pb_row_1-5_1-5_3-5:not(.et_pb_row--with-menu),
+        .et-db #et-boc .et-l .et_pb_row_3-5_1-5_1-5:not(.et_pb_row--with-menu),
+        .et-db #et-boc .et-l .et_pb_row_1-4_1-4_1-2:not(.et_pb_row--with-menu),
+        .et-db #et-boc .et-l .et_pb_row_1-2_1-4_1-4:not(.et_pb_row--with-menu),
+        .et-db #et-boc .et-l .et_pb_row_1-4_1-4:not(.et_pb_row--with-menu),
+        .et-db #et-boc .et-l .et_pb_row_1-6_1-6_1-6_1-6:not(.et_pb_row--with-menu) {
+          overflow: hidden; }
       .et-db #et-boc .et-l .et_pb_row_4col > .et_pb_column.et_pb_column_1_4, .et-db #et-boc .et-l .et_pb_row_1-4_1-4_1-2 > .et_pb_column.et_pb_column_1_4, .et-db #et-boc .et-l .et_pb_row_1-4_1-4 > .et_pb_column.et_pb_column_1_4 {
         width: 47.25%;
         margin-right: 5.5%; }
@@ -15691,32 +15738,179 @@ span.comment_date {
         display: block; }
       .et-db #et-boc .et-l .et_pb_post {
         margin-bottom: 42px; }
-      .et-db #et-boc .et-l .et_pb_column .et_pb_newsletter_form,
-      .et-db #et-boc .et-l .et_pb_column .et_pb_newsletter_description,
-      .et-db #et-boc .et-l .et_pb_column.et_pb_column_inner .et_pb_newsletter_form,
-      .et-db #et-boc .et-l .et_pb_column.et_pb_column_inner .et_pb_newsletter_description {
+      .et-db #et-boc .et-l .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+      .et-db #et-boc .et-l .et_pb_newsletter.et_pb_login .et_pb_newsletter_form {
         width: 50%;
-        padding: 0; }
-      .et-db #et-boc .et-l .et_pb_column .et_pb_newsletter_form,
-      .et-db #et-boc .et-l .et_pb_column.et_pb_column_inner .et_pb_newsletter_form,
-      .et-db #et-boc .et-l .et_pb_row_1-4_3-4 .et_pb_column.et_pb_column_1_4 .et_pb_newsletter_form,
-      .et-db #et-boc .et-l .et_pb_row_1-4_3-4 .et_pb_column.et_pb_column_1_4.et_pb_column_inner .et_pb_newsletter_form,
-      .et-db #et-boc .et-l .et_pb_row_3-4_1-4 .et_pb_column.et_pb_column_1_4 .et_pb_newsletter_form,
-      .et-db #et-boc .et-l .et_pb_row_3-4_1-4 .et_pb_column.et_pb_column_1_4.et_pb_column_inner .et_pb_newsletter_form {
+        padding-top: 0;
+        padding-bottom: 0; }
+      .et-db #et-boc .et-l .et_pb_newsletter.et_pb_login .et_pb_newsletter_form {
+        padding-left: 40px;
+        padding-right: 0; }
+      .et-db #et-boc .et-l .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right, .et-db #et-boc .et-l .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row; }
+        .et-db #et-boc .et-l .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form {
+          padding-top: 0;
+          padding-bottom: 0; }
+      .et-db #et-boc .et-l .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form {
         padding-left: 40px; }
-      .et-db #et-boc .et-l .et_pb_column.et_pb_column_1_4 .et_pb_newsletter_form,
-      .et-db #et-boc .et-l .et_pb_column.et_pb_column_1_4 .et_pb_newsletter_description,
-      .et-db #et-boc .et-l .et_pb_column.et_pb_column_1_5 .et_pb_newsletter_form,
-      .et-db #et-boc .et-l .et_pb_column.et_pb_column_1_5 .et_pb_newsletter_description,
-      .et-db #et-boc .et-l .et_pb_column.et_pb_column_1_6 .et_pb_newsletter_form,
-      .et-db #et-boc .et-l .et_pb_column.et_pb_column_1_6 .et_pb_newsletter_description {
+      .et-db #et-boc .et-l .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form {
+        padding-right: 40px; }
+      .et-db #et-boc .et-l .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form {
+        padding-top: 25px; }
+      .et-db #et-boc .et-l .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form {
+        padding-bottom: 25px; }
+      .et-db #et-boc .et-l .et_pb_row_4col > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+      .et-db #et-boc .et-l .et_pb_row_4col > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-4_1-4_1-2 > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+      .et-db #et-boc .et-l .et_pb_row_1-4_1-4_1-2 > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-2_1-4_1-4 > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+      .et-db #et-boc .et-l .et_pb_row_1-2_1-4_1-4 > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-4_1-4 > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+      .et-db #et-boc .et-l .et_pb_row_1-4_1-4 > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form {
         width: 100%;
-        padding: 0; }
-      .et-db #et-boc .et-l .et_pb_row_1-4_3-4 .et_pb_column.et_pb_column_1_4 .et_pb_newsletter_form,
-      .et-db #et-boc .et-l .et_pb_row_1-4_3-4 .et_pb_column.et_pb_column_1_4 .et_pb_newsletter_description,
-      .et-db #et-boc .et-l .et_pb_row_3-4_1-4 .et_pb_column.et_pb_column_1_4 .et_pb_newsletter_form,
-      .et-db #et-boc .et-l .et_pb_row_3-4_1-4 .et_pb_column.et_pb_column_1_4 .et_pb_newsletter_description {
-        width: 50%; }
+        padding-left: 0;
+        padding-right: 0; }
+      .et-db #et-boc .et-l .et_pb_row_4col > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right, .et-db #et-boc .et-l .et_pb_row_4col > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left, .et-db #et-boc .et-l .et_pb_row_1-4_1-4_1-2 > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right, .et-db #et-boc .et-l .et_pb_row_1-4_1-4_1-2 > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left, .et-db #et-boc .et-l .et_pb_row_1-2_1-4_1-4 > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right, .et-db #et-boc .et-l .et_pb_row_1-2_1-4_1-4 > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left, .et-db #et-boc .et-l .et_pb_row_1-4_1-4 > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right, .et-db #et-boc .et-l .et_pb_row_1-4_1-4 > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; }
+        .et-db #et-boc .et-l .et_pb_row_4col > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_4col > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-4_1-4_1-2 > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-4_1-4_1-2 > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-2_1-4_1-4 > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-2_1-4_1-4 > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-4_1-4 > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-4_1-4 > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form {
+          padding-left: 0;
+          padding-right: 0; }
+      .et-db #et-boc .et-l .et_pb_row_4col > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_4col > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-4_1-4_1-2 > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-4_1-4_1-2 > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-2_1-4_1-4 > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-2_1-4_1-4 > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-4_1-4 > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-4_1-4 > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form {
+        padding-top: 25px; }
+      .et-db #et-boc .et-l .et_pb_row_4col > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_4col > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-4_1-4_1-2 > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-4_1-4_1-2 > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-2_1-4_1-4 > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-2_1-4_1-4 > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-4_1-4 > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-4_1-4 > .et_pb_column.et_pb_column_1_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form {
+        padding-bottom: 25px; }
+      .et-db #et-boc .et-l .et_pb_row_5col > .et_pb_column.et_pb_column_1_5 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+      .et-db #et-boc .et-l .et_pb_row_5col > .et_pb_column.et_pb_column_1_5 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-5_1-5_3-5 > .et_pb_column.et_pb_column_1_5 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+      .et-db #et-boc .et-l .et_pb_row_1-5_1-5_3-5 > .et_pb_column.et_pb_column_1_5 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_3-5_1-5_1-5 > .et_pb_column.et_pb_column_1_5 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+      .et-db #et-boc .et-l .et_pb_row_3-5_1-5_1-5 > .et_pb_column.et_pb_column_1_5 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0; }
+      .et-db #et-boc .et-l .et_pb_row_5col > .et_pb_column.et_pb_column_1_5 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right, .et-db #et-boc .et-l .et_pb_row_5col > .et_pb_column.et_pb_column_1_5 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left, .et-db #et-boc .et-l .et_pb_row_1-5_1-5_3-5 > .et_pb_column.et_pb_column_1_5 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right, .et-db #et-boc .et-l .et_pb_row_1-5_1-5_3-5 > .et_pb_column.et_pb_column_1_5 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left, .et-db #et-boc .et-l .et_pb_row_3-5_1-5_1-5 > .et_pb_column.et_pb_column_1_5 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right, .et-db #et-boc .et-l .et_pb_row_3-5_1-5_1-5 > .et_pb_column.et_pb_column_1_5 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; }
+        .et-db #et-boc .et-l .et_pb_row_5col > .et_pb_column.et_pb_column_1_5 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_5col > .et_pb_column.et_pb_column_1_5 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-5_1-5_3-5 > .et_pb_column.et_pb_column_1_5 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-5_1-5_3-5 > .et_pb_column.et_pb_column_1_5 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_3-5_1-5_1-5 > .et_pb_column.et_pb_column_1_5 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_3-5_1-5_1-5 > .et_pb_column.et_pb_column_1_5 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form {
+          padding-left: 0;
+          padding-right: 0; }
+      .et-db #et-boc .et-l .et_pb_row_5col > .et_pb_column.et_pb_column_1_5 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_5col > .et_pb_column.et_pb_column_1_5 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-5_1-5_3-5 > .et_pb_column.et_pb_column_1_5 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-5_1-5_3-5 > .et_pb_column.et_pb_column_1_5 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_3-5_1-5_1-5 > .et_pb_column.et_pb_column_1_5 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_3-5_1-5_1-5 > .et_pb_column.et_pb_column_1_5 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form {
+        padding-top: 25px; }
+      .et-db #et-boc .et-l .et_pb_row_5col > .et_pb_column.et_pb_column_1_5 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_5col > .et_pb_column.et_pb_column_1_5 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-5_1-5_3-5 > .et_pb_column.et_pb_column_1_5 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-5_1-5_3-5 > .et_pb_column.et_pb_column_1_5 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_3-5_1-5_1-5 > .et_pb_column.et_pb_column_1_5 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_3-5_1-5_1-5 > .et_pb_column.et_pb_column_1_5 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form {
+        padding-bottom: 25px; }
+      .et-db #et-boc .et-l .et_pb_row_6col > .et_pb_column.et_pb_column_1_6 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+      .et-db #et-boc .et-l .et_pb_row_6col > .et_pb_column.et_pb_column_1_6 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-6_1-6_1-6_1-2 > .et_pb_column.et_pb_column_1_6 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+      .et-db #et-boc .et-l .et_pb_row_1-6_1-6_1-6_1-2 > .et_pb_column.et_pb_column_1_6 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-2_1-6_1-6_1-6 > .et_pb_column.et_pb_column_1_6 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+      .et-db #et-boc .et-l .et_pb_row_1-2_1-6_1-6_1-6 > .et_pb_column.et_pb_column_1_6 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0; }
+      .et-db #et-boc .et-l .et_pb_row_6col > .et_pb_column.et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right, .et-db #et-boc .et-l .et_pb_row_6col > .et_pb_column.et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left, .et-db #et-boc .et-l .et_pb_row_1-6_1-6_1-6_1-2 > .et_pb_column.et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right, .et-db #et-boc .et-l .et_pb_row_1-6_1-6_1-6_1-2 > .et_pb_column.et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left, .et-db #et-boc .et-l .et_pb_row_1-2_1-6_1-6_1-6 > .et_pb_column.et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right, .et-db #et-boc .et-l .et_pb_row_1-2_1-6_1-6_1-6 > .et_pb_column.et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; }
+        .et-db #et-boc .et-l .et_pb_row_6col > .et_pb_column.et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_6col > .et_pb_column.et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-6_1-6_1-6_1-2 > .et_pb_column.et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-6_1-6_1-6_1-2 > .et_pb_column.et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-2_1-6_1-6_1-6 > .et_pb_column.et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-2_1-6_1-6_1-6 > .et_pb_column.et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form {
+          padding-left: 0;
+          padding-right: 0; }
+      .et-db #et-boc .et-l .et_pb_row_6col > .et_pb_column.et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_6col > .et_pb_column.et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-6_1-6_1-6_1-2 > .et_pb_column.et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-6_1-6_1-6_1-2 > .et_pb_column.et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-2_1-6_1-6_1-6 > .et_pb_column.et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-2_1-6_1-6_1-6 > .et_pb_column.et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form {
+        padding-top: 25px; }
+      .et-db #et-boc .et-l .et_pb_row_6col > .et_pb_column.et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_6col > .et_pb_column.et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-6_1-6_1-6_1-2 > .et_pb_column.et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-6_1-6_1-6_1-2 > .et_pb_column.et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-2_1-6_1-6_1-6 > .et_pb_column.et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_row_1-2_1-6_1-6_1-6 > .et_pb_column.et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form {
+        padding-bottom: 25px; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form {
+        width: 50%;
+        padding-top: 0;
+        padding-bottom: 0; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form {
+        padding-left: 40px;
+        padding-right: 0; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row; }
+        .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form {
+          padding-top: 0;
+          padding-bottom: 0; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form {
+        padding-left: 40px; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form {
+        padding-right: 40px; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form {
+        padding-top: 25px; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form {
+        padding-bottom: 25px; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form {
+        width: 50%;
+        padding-top: 0;
+        padding-bottom: 0; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form {
+        padding-left: 40px;
+        padding-right: 0; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row; }
+        .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form {
+          padding-top: 0;
+          padding-bottom: 0; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form {
+        padding-left: 40px; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form {
+        padding-right: 40px; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form {
+        padding-top: 25px; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form {
+        padding-bottom: 25px; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_1_6 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_1_6 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; }
+        .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form {
+          padding-left: 0;
+          padding-right: 0; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form {
+        padding-top: 25px; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_1_6 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form {
+        padding-bottom: 25px; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_1_2 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_1_2 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form {
+        width: 50%;
+        padding-top: 0;
+        padding-bottom: 0; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_1_2 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form {
+        padding-left: 40px;
+        padding-right: 0; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_1_2 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_1_2 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row; }
+        .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_1_2 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_1_2 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form {
+          padding-top: 0;
+          padding-bottom: 0; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_1_2 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form {
+        padding-left: 40px; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_1_2 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form {
+        padding-right: 40px; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_1_2 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form {
+        padding-top: 25px; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_1_2 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form {
+        padding-bottom: 25px; }
       .et-db #et-boc .et-l .et_pb_column .et_pb_pricing_table {
         width: 50% !important;
         max-width: 50.5% !important; }
@@ -16247,7 +16441,6 @@ span.comment_date {
       /* Gallery */
       /* Audio */
       /* Salvattore Styles */
-      /* Email Opt-in Module */
       /* Background Video - Tablet only */ }
       .et-db #et-boc .et-l .et_pb_column_3_8 .et_pb_video_play,
       .et-db #et-boc .et-l .et_pb_column_1_3 .et_pb_video_play,
@@ -16340,34 +16533,6 @@ span.comment_date {
         font-size: 14px !important; }
       .et-db #et-boc .et-l .et_pb_column .et_pb_blog_grid .et_pb_salvattore_content[data-columns]::before {
         content: '2 .column.size-1of2'; }
-      .et-db #et-boc .et-l .et_pb_column_1_2 > .et_pb_newsletter_layout_left_right,
-      .et-db #et-boc .et-l .et_pb_column_1_2 > .et_pb_newsletter_layout_right_left,
-      .et-db #et-boc .et-l .et_pb_column_3_5 > .et_pb_newsletter_layout_left_right,
-      .et-db #et-boc .et-l .et_pb_column_3_5 > .et_pb_newsletter_layout_right_left,
-      .et-db #et-boc .et-l .et_pb_column_3_8.et_pb_column_inner .et_pb_newsletter_layout_left_right,
-      .et-db #et-boc .et-l .et_pb_column_3_8.et_pb_column_inner .et_pb_newsletter_layout_right_left,
-      .et-db #et-boc .et-l .et_pb_column_1_3 .et_pb_newsletter_layout_left_right,
-      .et-db #et-boc .et-l .et_pb_column_1_3 .et_pb_newsletter_layout_right_left,
-      .et-db #et-boc .et-l .et_pb_column_2_5 .et_pb_newsletter_layout_left_right,
-      .et-db #et-boc .et-l .et_pb_column_2_5 .et_pb_newsletter_layout_right_left,
-      .et-db #et-boc .et-l .et_pb_column_1_3.et_pb_column_inner .et_pb_newsletter_layout_left_right,
-      .et-db #et-boc .et-l .et_pb_column_1_3.et_pb_column_inner .et_pb_newsletter_layout_right_left,
-      .et-db #et-boc .et-l .et_pb_column_2_5.et_pb_column_inner .et_pb_newsletter_layout_left_right,
-      .et-db #et-boc .et-l .et_pb_column_2_5.et_pb_column_inner .et_pb_newsletter_layout_right_left,
-      .et-db #et-boc .et-l .et_pb_column_4_4 .et_pb_newsletter_layout_left_right,
-      .et-db #et-boc .et-l .et_pb_column_4_4 .et_pb_newsletter_layout_right_left,
-      .et-db #et-boc .et-l .et_pb_column_3_4 .et_pb_newsletter_layout_left_right,
-      .et-db #et-boc .et-l .et_pb_column_3_4 .et_pb_newsletter_layout_right_left,
-      .et-db #et-boc .et-l .et_pb_column_2_3 .et_pb_newsletter_layout_left_right,
-      .et-db #et-boc .et-l .et_pb_column_2_3 .et_pb_newsletter_layout_right_left,
-      .et-db #et-boc .et-l .et_pb_row_1-4_3-4 .et_pb_column.et_pb_column_1_4 .et_pb_newsletter_layout_left_right,
-      .et-db #et-boc .et-l .et_pb_row_1-4_3-4 .et_pb_column.et_pb_column_1_4 .et_pb_newsletter_layout_right_left,
-      .et-db #et-boc .et-l .et_pb_row_3-4_1-4 .et_pb_column.et_pb_column_1_4 .et_pb_newsletter_layout_left_right,
-      .et-db #et-boc .et-l .et_pb_row_3-4_1-4 .et_pb_column.et_pb_column_1_4 .et_pb_newsletter_layout_right_left {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row; }
       .et-db #et-boc .et-l .et_pb_section_video_bg.et_pb_section_video_bg_tablet_only {
         display: block; } }
   @media all and (min-width: 768px) and (max-width: 800px) {
@@ -16485,25 +16650,113 @@ span.comment_date {
         border-radius: 0 0 3px; }
       .et-db #et-boc .et-l .et_pb_promo {
         padding: 40px; }
-      .et-db #et-boc .et-l .et_pb_column .et_pb_newsletter_form,
-      .et-db #et-boc .et-l .et_pb_column .et_pb_newsletter_description,
-      .et-db #et-boc .et-l .et_pb_column.et_pb_column_inner .et_pb_newsletter_form,
-      .et-db #et-boc .et-l .et_pb_column.et_pb_column_inner .et_pb_newsletter_description,
-      .et-db #et-boc .et-l .et_pb_row_1-4_3-4 .et_pb_column.et_pb_column_1_4 .et_pb_newsletter_form,
-      .et-db #et-boc .et-l .et_pb_row_1-4_3-4 .et_pb_column.et_pb_column_1_4 .et_pb_newsletter_description,
-      .et-db #et-boc .et-l .et_pb_row_1-4_3-4 .et_pb_column.et_pb_column_1_4.et_pb_column_inner .et_pb_newsletter_form,
-      .et-db #et-boc .et-l .et_pb_row_1-4_3-4 .et_pb_column.et_pb_column_1_4.et_pb_column_inner .et_pb_newsletter_description,
-      .et-db #et-boc .et-l .et_pb_row_3-4_1-4 .et_pb_column.et_pb_column_1_4 .et_pb_newsletter_form,
-      .et-db #et-boc .et-l .et_pb_row_3-4_1-4 .et_pb_column.et_pb_column_1_4 .et_pb_newsletter_description,
-      .et-db #et-boc .et-l .et_pb_row_3-4_1-4 .et_pb_column.et_pb_column_1_4.et_pb_column_inner .et_pb_newsletter_form {
+      .et-db #et-boc .et-l .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+      .et-db #et-boc .et-l .et_pb_newsletter.et_pb_login .et_pb_newsletter_form {
         width: 100%;
-        padding: 0; }
-      .et-db #et-boc .et-l .et_pb_column_4_4 > .et_pb_newsletter,
-      .et-db #et-boc .et-l .et_pb_column_3_4 > .et_pb_newsletter,
-      .et-db #et-boc .et-l .et_pb_column_2_3 > .et_pb_newsletter {
-        display: block; }
-      .et-db #et-boc .et-l .et_pb_column_4_4 > .et_pb_newsletter .et_pb_newsletter_description {
-        margin-bottom: 20px; }
+        padding-left: 0;
+        padding-right: 0; }
+      .et-db #et-boc .et-l .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right, .et-db #et-boc .et-l .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; }
+        .et-db #et-boc .et-l .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form {
+          padding-left: 0;
+          padding-right: 0; }
+      .et-db #et-boc .et-l .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form {
+        padding-top: 25px; }
+      .et-db #et-boc .et-l .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form {
+        padding-bottom: 25px; }
+      .et-db #et-boc .et-l .et_pb_column_4_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+      .et-db #et-boc .et-l .et_pb_column_4_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form,
+      .et-db #et-boc .et-l .et_pb_column_3_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+      .et-db #et-boc .et-l .et_pb_column_3_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form,
+      .et-db #et-boc .et-l .et_pb_column_2_3 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+      .et-db #et-boc .et-l .et_pb_column_2_3 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0; }
+      .et-db #et-boc .et-l .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right, .et-db #et-boc .et-l .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left,
+      .et-db #et-boc .et-l .et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right,
+      .et-db #et-boc .et-l .et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left,
+      .et-db #et-boc .et-l .et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right,
+      .et-db #et-boc .et-l .et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; }
+        .et-db #et-boc .et-l .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form,
+        .et-db #et-boc .et-l .et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form,
+        .et-db #et-boc .et-l .et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form,
+        .et-db #et-boc .et-l .et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form,
+        .et-db #et-boc .et-l .et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form {
+          padding-left: 0;
+          padding-right: 0; }
+      .et-db #et-boc .et-l .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form,
+      .et-db #et-boc .et-l .et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form,
+      .et-db #et-boc .et-l .et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form,
+      .et-db #et-boc .et-l .et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form,
+      .et-db #et-boc .et-l .et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form {
+        padding-top: 25px; }
+      .et-db #et-boc .et-l .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form,
+      .et-db #et-boc .et-l .et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form,
+      .et-db #et-boc .et-l .et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form,
+      .et-db #et-boc .et-l .et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form,
+      .et-db #et-boc .et-l .et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form {
+        padding-bottom: 25px; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; }
+        .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form {
+          padding-left: 0;
+          padding-right: 0; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form {
+        padding-top: 25px; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form {
+        padding-bottom: 25px; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; }
+        .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form {
+          padding-left: 0;
+          padding-right: 0; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form {
+        padding-top: 25px; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_3_4 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_2_3 .et_pb_column_4_4 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form {
+        padding-bottom: 25px; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_1_2 .et_pb_newsletter.et_pb_login .et_pb_newsletter_description,
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_1_2 .et_pb_newsletter.et_pb_login .et_pb_newsletter_form {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_1_2 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_1_2 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; }
+        .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_1_2 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_1_2 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form {
+          padding-left: 0;
+          padding-right: 0; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_1_2 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_left_right .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_1_2 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_top_bottom .et_pb_newsletter_form {
+        padding-top: 25px; }
+      .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_1_2 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_right_left .et_pb_newsletter_form, .et-db #et-boc .et-l .et_pb_specialty_column.et_pb_column_1_2 .et_pb_newsletter.et_pb_subscribe.et_pb_newsletter_layout_bottom_top .et_pb_newsletter_form {
+        padding-bottom: 25px; }
       .et-db #et-boc .et-l .et_pb_slider:hover .et-pb-arrow-prev {
         left: 0;
         opacity: 1; }

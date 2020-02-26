@@ -284,6 +284,10 @@ abstract class ET_Builder_Module_Type_WithSpamProtection extends ET_Builder_Modu
 	 * @return bool
 	 */
 	public function is_spam_submission() {
+		if ( empty( $_POST['token'] ) ) {
+			return false;
+		}
+
 		$provider = $this->prop( 'spam_provider' );
 		$account  = $this->prop( "{$provider}_list" );
 
